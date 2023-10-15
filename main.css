@@ -1,0 +1,86 @@
+*{
+    text-align: center;
+    font-family: Arial;
+}
+
+html{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    width: 55%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default
+}
+
+.container p{
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 20px 10px;
+    width: 50%;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 20px black;
+}
+
+.container:hover  p {
+    display: block;
+}
+
+ul{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p, h2{
+    width: 50%;
+}
+
+#cristal{
+    width: 20%;
+}
+
+.vl {
+    border-left: 6px solid rgb(0, 0, 0);
+    height: 200px;
+    position: relative;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+#resume{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 20px 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 20px black;
+}
