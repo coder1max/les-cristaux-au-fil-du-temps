@@ -7,7 +7,7 @@
 }
 
 html{
-    background-color: gray;
+    background-image: linear-gradient(black, gray, black);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +26,26 @@ body{
 	opacity: 0;
 	transition: all 1s;
 	filter: blur(5px);
-	transform: translateX(-100%);
 	transition-delay: 80ms;
 }
 
 .afficher {
 	opacity: 1;
 	filter: blur(0);
-	transform: translateX(0);
+}
+
+.hidden {
+	opacity: 0;
+	transition: all 1s;
+	filter: blur(5px);
+	transform: translateY(100%);
+	transition-delay: 80ms;
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
 }
 
 h1{
@@ -49,15 +61,19 @@ h1{
     cursor: default
 }
 
-.container p{
-    display: none;
+.container .infos{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     color: black;
     padding: 20px 10px;
     width: 50%;
     border-radius: 20px;
-    border: 2px solid black;
     box-shadow: 1px 1px 20px black;
+}
+
+.infos img{
+    border-radius: 15px;
 }
 
 .container:hover  p {
@@ -78,7 +94,7 @@ li{
     align-items: center;
 }
 
-p, h2{
+h2{
     width: 50%;
 }
 
@@ -104,4 +120,30 @@ p, h2{
     border-radius: 20px;
     border: 2px solid black;
     box-shadow: 1px 1px 20px black;
+}
+
+h6{
+    font-style: italic;
+    font-weight: 100;
+}
+
+a{
+    color: gray;
+}
+
+#polyedres{
+    width: 100px;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    ul {
+        width: 90%;
+    }
+    .container .infos {
+        width: 90%; /* Adjust the width to your preference */
+    }
 }
